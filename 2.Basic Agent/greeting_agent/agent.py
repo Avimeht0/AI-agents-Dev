@@ -3,8 +3,10 @@ from google.adk.models.lite_llm import LiteLlm
 import os
 from dotenv import load_dotenv
 load_dotenv()
-model = LiteLlm(model="openrouter/mistralai/mistral-small-3.2-24b-instruct:free",
-               api_key=os.getenv("OPENROUTER_API_KEY"))
+model = LiteLlm(
+    model="openrouter/deepseek/deepseek-chat-v3.1:free",
+    api_key=os.getenv("OPENROUTER_API_KEY")
+)
 
 
 
