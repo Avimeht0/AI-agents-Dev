@@ -2,7 +2,7 @@ from google.adk import Agent
 from google.adk.models.lite_llm import LiteLlm
 import os
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv('/home/arvind/AI-agents-Dev/.env', override=False)
 model = LiteLlm(
     model="openrouter/deepseek/deepseek-chat-v3.1:free",
     api_key=os.getenv("OPENROUTER_API_KEY")
@@ -15,5 +15,5 @@ root_agent=Agent(
     model=model,
     description="A greeting agent that greets the user",
     instruction="You are a greeting agent that greets the user",
-     
+    
 )

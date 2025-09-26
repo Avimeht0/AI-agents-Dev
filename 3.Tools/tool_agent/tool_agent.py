@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from google.adk.models.lite_llm import LiteLlm
 from google.adk import Agent
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from root .env
+load_dotenv('/home/arvind/AI-agents-Dev/.env', override=False)
 
 # Define the tool function
 def bad_jokes() -> str:
